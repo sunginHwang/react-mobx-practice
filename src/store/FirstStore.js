@@ -3,6 +3,7 @@ import { observable, action, computed } from 'mobx';
  class FirstStore{
 
     @observable number = 0;
+    notObservableNumber = 10;
 
     @computed
     get getNumber(){
@@ -13,6 +14,8 @@ import { observable, action, computed } from 'mobx';
     setNumber(number){
         this.number = number;
     }
+
+
 
 
 }
