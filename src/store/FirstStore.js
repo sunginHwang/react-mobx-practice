@@ -1,21 +1,21 @@
-import { observable } from 'mobx';
+import { observable, action, computed } from 'mobx';
 
-export class FirstStore{
+ class FirstStore{
 
-    @observable
-    private _number = 30;
+    @observable number = 0;
 
-    constructor(number){
-        this._number = number;
+    @computed
+    get getNumber(){
+        return this.number;
     }
 
-    public getNumber(){
-        return this._number;
-    }
-
-    public setNumber(number){
-        this._number = number;
+    @action
+    setNumber(number){
+        this.number = number;
     }
 
 
 }
+
+const singleton = new FirstStore();
+export default singleton;
