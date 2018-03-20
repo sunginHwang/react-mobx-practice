@@ -1,20 +1,21 @@
 import { observable, action, computed } from 'mobx';
 
-export class FirstStore{
+export class CombineTestStore{
 
     constructor(store) {
         this.store = store
-    };
+    }
 
-    @observable number = 0;
+    @observable Secondnumber = 0;
 
     @computed
-    get getNumber(){
-        return this.number;
+    get getSecondNumber(){
+        return this.Secondnumber;
     }
 
     @action
-    setNumber(number){
+    setSecondNumber(number){
         this.number = number;
     }
-};
+
+}
